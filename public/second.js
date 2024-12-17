@@ -1,6 +1,6 @@
 setInterval(async () => {
     try {
-        const response = await fetch('http://localhost:3000/get-objects');
+        const response = await fetch('https://glitch-text-project.up.railway.app/get-objects');
         const objects = await response.json();
 
         if (objects.length === 0) return;
@@ -51,7 +51,6 @@ setInterval(async () => {
             animation: glitch-text ${duration}s infinite;
         `;
 
-        // 7. Оновлення ключових кадрів анімації
         const styleSheet = document.getElementById('dynamic-styles');
         if (styleSheet) styleSheet.remove();
 
@@ -78,4 +77,4 @@ setInterval(async () => {
     } catch (error) {
         console.error('Error fetching or updating glitch text:', error);
     }
-}, 5000); // Оновлення кожні 5 секунд
+}, 5000);
