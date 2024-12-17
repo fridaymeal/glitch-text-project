@@ -72,7 +72,7 @@ document.getElementById('submit-btn').addEventListener('click', async (e) => {
     };
 
     try {
-        const response = await fetch('http://localhost:3000/add-object', {
+        const response = await fetch('https://glitch-text-project.up.railway.app/add-object', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newObj)
